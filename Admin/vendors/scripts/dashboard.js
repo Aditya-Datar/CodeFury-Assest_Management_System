@@ -12,7 +12,7 @@ var options = {
 		height: 100,
 		width: 70,
 		type: 'radialBar',
-	},	
+	},
 	plotOptions: {
 		radialBar: {
 			hollow: {
@@ -82,7 +82,7 @@ var options2 = {
 		height: 100,
 		width: 70,
 		type: 'radialBar',
-	},	
+	},
 	plotOptions: {
 		radialBar: {
 			hollow: {
@@ -152,7 +152,7 @@ var options3 = {
 		height: 100,
 		width: 70,
 		type: 'radialBar',
-	},	
+	},
 	plotOptions: {
 		radialBar: {
 			hollow: {
@@ -222,7 +222,7 @@ var options4 = {
 		height: 100,
 		width: 70,
 		type: 'radialBar',
-	},	
+	},
 	plotOptions: {
 		radialBar: {
 			hollow: {
@@ -296,7 +296,7 @@ var options5 = {
 	plotOptions: {
 		bar: {
 			horizontal: false,
-			columnWidth: '25%',
+			columnWidth: '35%',
 			endingShape: 'rounded'
 		},
 	},
@@ -309,14 +309,14 @@ var options5 = {
 		colors: ['transparent']
 	},
 	series: [{
-		name: 'In Progress',
-		data: [40, 28, 47, 22, 34, 25]
+		name: 'Available',
+		data: [40, 28, 47, 22, 34]
 	}, {
-		name: 'Complete',
-		data: [30, 20, 37, 10, 28, 11]
+		name: 'Borrowed',
+		data: [30, 20, 37, 10, 28]
 	}],
 	xaxis: {
-		categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+		categories: ['Mobile', 'Laptop', 'Books', 'Cable', 'Headphones'],
 		labels: {
 			style: {
 				colors: ['#353535'],
@@ -376,53 +376,31 @@ var options5 = {
 }
 
 var options6 = {
-	series: [73],
+	series: [60, 40],
 	chart: {
-	  height: 350,
-	  type: 'radialBar',
-	  offsetY: 0
-	},
-	colors: ['#0B132B', '#222222'],
-	plotOptions: {
-	  radialBar: {
-		startAngle: -135,
-		endAngle: 135,
-		dataLabels: {
-		  name: {
-			fontSize: '16px',
-			color: undefined,
-			offsetY: 120
-		  },
-		  value: {
-			offsetY: 76,
-			fontSize: '22px',
-			color: undefined,
-			formatter: function (val) {
-			  return val + "%";
-			}
-		  }
-		}
-	  }
-	},
-	fill: {
-	  type: 'gradient',
-	  gradient: {
-		  shade: 'dark',
-		  shadeIntensity: 0.15,
-		  inverseColors: false,
-		  opacityFrom: 1,
-		  opacityTo: 1,
-		  stops: [0, 50, 65, 91]
+	width: 380 ,
+	type: 'pie',
+  },
+  colors: ['#1b00ff', '#f56767'],
+  labels: ['Succesfull Imports', 'Unsucessfull Imports'],
+  responsive: [{
+	breakpoint: 480,
+	options: {
+	  chart: {
+		width: 400
 	  },
-	},
-	stroke: {
-	  dashArray: 4
-	},
-	labels: ['Achieve Goals'],
-};
+	  legend: {
+		position: 'bottom'
+	  }
+	}
+  }]
+  };
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+
+// var chart = new ApexCharts(document.querySelector("#chart"), options);
+// chart.render();
 
 var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
 chart2.render();
@@ -441,7 +419,7 @@ chart6.render();
 
 
 // datatable init
-$('document').ready(function(){
+$('document').ready(function () {
 	$('.data-table').DataTable({
 		scrollCollapse: true,
 		autoWidth: true,
@@ -460,7 +438,7 @@ $('document').ready(function(){
 			searchPlaceholder: "Search",
 			paginate: {
 				next: '<i class="ion-chevron-right"></i>',
-				previous: '<i class="ion-chevron-left"></i>'  
+				previous: '<i class="ion-chevron-left"></i>'
 			}
 		},
 	});
