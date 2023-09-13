@@ -52,37 +52,77 @@
 	</div> -->
 
 
+	<div id="EditCategory" class="modal modal-top fade calendar-modal">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<form id="add-event" onsubmit="$('#exampleModalCenter').modal('show');" action="#">
+					<div class="modal-body">
+						<h4 class="text-blue h4 mb-10">Edit Asset Details</h4>
+						<div class="form-group">
+							<label>Category Id</label>
+							<input type="number" class="form-control" name="ename" value="567890" min="0" readonly>
+						</div>
+						<div class="form-group">
+							<label>Category Type</label>
+							<input type="text" class="form-control" name="ename" value="Laptop" required>
+						</div>
+						<div class="form-group">
+							<label>Lending Period</label>
+							<input type="number" class="form-control" name="ename" value="10" min="1" required>
+						</div>
+						<div class="form-group">
+							<label>Late Fees</label>
+							<input type="number" class="form-control" name="ename" value="100" min="10" required>
+						</div>
+						<div class="form-group">
+							<label>Banned Period</label>
+							<input type="number" class="form-control" name="ename" value="10" min="1" required>
+						</div>
+						
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="submit">Save</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<div id="EditAsset" class="modal modal-top fade calendar-modal">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
-				<form id="add-event" onsubmit="return false;">
+				<form id="add-event" onsubmit="$('#exampleModalCenter').modal('show');" action="#">
 					<div class="modal-body">
 						<h4 class="text-blue h4 mb-10">Edit Asset Details</h4>
 						<div class="form-group">
 							<label>Asset Id</label>
-							<input type="number" class="form-control" name="ename" value="567890" min="0">
+							<input type="number" class="form-control" name="ename" value="567890" min="0" readonly required>
+						</div>
+						<div class="form-group">
+							<label>Asset Name</label>
+							<input type="text" class="form-control" name="ename" value="Books Programming" required>
 						</div>
 						<div class="form-group">
 							<label>Asset Description</label>
-							<textarea class="form-control" name="edesc">
-								
+							<textarea class="form-control" name="edesc" required>Jabra is a Danish brand specializing in audio equipment, and more recently videoconference systems
 							</textarea>
 						</div>
 						<div class="form-group">
 							<label>Late Fees</label>
-							<input type="number" class="form-control" name="ename" value="500" min="0">
+							<input type="number" class="form-control" name="ename" value="500" min="10" required>
 						</div>
 						<div class="form-group">
 							<label>Status</label>
 							<select class="form-control" name="eicon">
+								<option value="circle" selected disabled>Select</option>
 								<option value="circle">Available</option>
 								<option value="cog">Unavailable</option>
 							</select>
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button class="btn btn-primary" data-toggle="modal"
-						data-target="#exampleModalCenter">Save</button>
+						<button class="btn btn-primary">Save</button>
 						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
 					</div>
 				</form>
@@ -93,17 +133,21 @@
 	<div id="AddAsset" class="modal modal-top fade calendar-modal">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
-				<form id="add-event" onsubmit="return false;">
+				<form id="add-event" onsubmit="$('#exampleModalCenter').modal('show');">
 					<div class="modal-body">
 						<h4 class="text-blue h4 mb-10">Edit Asset Details</h4>
-						
+						<div class="form-group">
+							<label>Asset Id</label>
+							<input type="text" class="form-control" name="ename" readonly value="6" required pattern="[A-Za-z\s]*">
+						</div>
 						<div class="form-group">
 							<label>Asset Name</label>
-							<input type="text" class="form-control" name="ename" value="" min="0" placeholder="">
+							<input type="text" class="form-control" name="ename" required pattern="[A-Za-z\s]*">
 						</div>
 						<div class="form-group">
 							<label>Category</label>
 							<select class="form-control" name="eicon">
+								<option value="cog" disabled selected>Select</option>
 								<option value="circle">Laptop</option>
 								<option value="cog">Books</option>
 								<option value="cog">Mobile</option>
@@ -112,29 +156,41 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label>Can't find the category you want? <svg data-toggle="tooltip" data-placement="bottom" title="You have to add category using add category feature!!" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg> </label>
+							<label>Can't find the category you want? <svg data-toggle="tooltip" data-placement="bottom"
+									title="You have to add category using add category feature!!"
+									xmlns="http://www.w3.org/2000/svg" height="1em"
+									viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+									<path
+										d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+								</svg> </label>
 						</div>
 						<div class="form-group">
-							<label>Description  <svg data-toggle="tooltip" data-placement="bottom" title="Enter features of the asset you want to add!!" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg> </label>
-							<textarea class="form-control" name="edesc">
-								
+							<label>Description <svg data-toggle="tooltip" data-placement="bottom"
+									title="Enter features of the asset you want to add!!"
+									xmlns="http://www.w3.org/2000/svg" height="1em"
+									viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+									<path
+										d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+								</svg> </label>
+							<textarea class="form-control" name="edesc" required>
+
 							</textarea>
 						</div>
 						<div class="form-group">
 							<label>Date</label>
-							<input type="date" class="form-control" name="setTodaysDate" id="setTodaysDate">
+							<input type="date" class="form-control" name="setTodaysDate" id="setTodaysDate" required>
 						</div>
 						<div class="form-group">
 							<label>Status</label>
 							<select class="form-control" name="eicon">
+								<option value="" disabled selected>Select</option>
 								<option value="circle">Available</option>
 								<option value="cog">Unavailable</option>
 							</select>
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button class="btn btn-primary" data-toggle="modal"
-						data-target="#exampleModalCenter">Save</button>
+						<button class="btn btn-primary" type="submit">Save</button>
 						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
 					</div>
 				</form>
@@ -145,37 +201,66 @@
 	<div id="AddCategory" class="modal modal-top fade calendar-modal">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
-				<form id="add-event" onsubmit="return false;">
+				<form id="add-event" onsubmit="$('#exampleModalCenter').modal('show')">
 					<div class="modal-body">
 						<h4 class="text-blue h4 mb-10">Edit Category Details</h4>
 						<div class="form-group">
-							<label>Category Id <svg data-toggle="tooltip" data-placement="bottom" title="Unique 6 digit number of the new category" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></label>
-							<input type="number" class="form-control" name="ename" value="" min="0" placeholder="">
+							<label>Category Id <svg data-toggle="tooltip" data-placement="bottom"
+									title="Unique 6 digit number of the new category" xmlns="http://www.w3.org/2000/svg"
+									height="1em"
+									viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+									<path
+										d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+								</svg></label>
+							<input type="number" class="form-control" name="ename" value="6" min="0" placeholder="" readonly>
 						</div>
 						<div class="form-group">
-							<label>Category Type <svg data-toggle="tooltip" data-placement="bottom" title="Category of the asset you want to add" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></label>
-							<input type="text" class="form-control" name="ename">
+							<label>Category Type <svg data-toggle="tooltip" data-placement="bottom"
+									title="Name of the category of the asset you want to add" xmlns="http://www.w3.org/2000/svg"
+									height="1em"
+									viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+									<path
+										d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+								</svg></label>
+							<input type="text" class="form-control" name="ename" required pattern="[A-Za-z\s]*">
 						</div>
 						<div class="form-group">
-							<label>Lending Period (In Days) <svg data-toggle="tooltip" data-placement="bottom" title="Time for which user can borrow asset" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></th>
+							<label>Lending Period (In Days) <svg data-toggle="tooltip" data-placement="bottom"
+									title="Time for which user can borrow asset" xmlns="http://www.w3.org/2000/svg"
+									height="1em"
+									viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+									<path
+										d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+								</svg></th>
 							</label>
-							<input type="number" class="form-control" name="ename" value="1" min="1">
+							<input type="number" class="form-control" name="ename" value="1" min="1" required>
 						</div>
 						<div class="form-group">
-							<label>Late Fees (In Rs) <svg data-toggle="tooltip" data-placement="bottom" title="Fees user have to pay if asset is not returned on time." xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></th>
+							<label>Late Fees (In Rs) <svg data-toggle="tooltip" data-placement="bottom"
+									title="Fees user have to pay if asset is not returned on time."
+									xmlns="http://www.w3.org/2000/svg" height="1em"
+									viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+									<path
+										d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+								</svg></th>
 							</label>
-							<input type="number" class="form-control" name="ename" value="1" min="1">
+							<input type="number" class="form-control" name="ename" value="1" min="1" required>
 						</div>
 						<div class="form-group">
-							<label>Banned Period (In Days) <svg data-toggle="tooltip" data-placement="bottom" title="Time after which user will get banned from borrowing more asset" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></th>
+							<label>Banned Period (In Days) <svg data-toggle="tooltip" data-placement="bottom"
+									title="Time after which user will get banned from borrowing more asset"
+									xmlns="http://www.w3.org/2000/svg" height="1em"
+									viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+									<path
+										d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+								</svg></th>
 							</label>
-							<input type="number" class="form-control" name="ename" value="1" min="1">
+							<input type="number" class="form-control" name="ename" value="1" min="1" required>
 						</div>
-						
+
 					</div>
 					<div class="modal-footer">
-						<button class="btn btn-primary" data-toggle="modal"
-						data-target="#exampleModalCenter">Save</button>
+						<button class="btn btn-primary" type="submit">Save</button>
 						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
 					</div>
 				</form>
@@ -195,10 +280,10 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					AJAX is Required here to complete the requested action 
+					AJAX is Required here to complete the requested action
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay</button>
 				</div>
 			</div>
 		</div>
@@ -206,44 +291,6 @@
 
 	<div class="header">
 		<div class="header-left">
-			<div class="menu-icon dw dw-menu"></div>
-			<div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
-			<div class="header-search">
-				<form>
-					<div class="form-group mb-0">
-						<i class="dw dw-search2 search-icon"></i>
-						<input type="text" class="form-control search-input" placeholder="Search Here">
-						<div class="dropdown">
-							<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
-								<i class="ion-arrow-down-c"></i>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<div class="form-group row">
-									<label class="col-sm-12 col-md-2 col-form-label">From</label>
-									<div class="col-sm-12 col-md-10">
-										<input class="form-control form-control-sm form-control-line" type="text">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-12 col-md-2 col-form-label">To</label>
-									<div class="col-sm-12 col-md-10">
-										<input class="form-control form-control-sm form-control-line" type="text">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-12 col-md-2 col-form-label">Subject</label>
-									<div class="col-sm-12 col-md-10">
-										<input class="form-control form-control-sm form-control-line" type="text">
-									</div>
-								</div>
-								<div class="text-right">
-									<button class="btn btn-primary">Search</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
 		</div>
 		<div class="header-right">
 			<div class="dashboard-setting user-notification">
@@ -436,23 +483,9 @@
 							<span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
 						</a>
 					</li>
-
-
-					<li>
-						<a href="calendar.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-calendar1"></span><span class="mtext">Calendar</span>
-						</a>
-					</li>
-
-
 					<li>
 						<a href="chat.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-chat3"></span><span class="mtext">Chat</span>
-						</a>
-					</li>
-					<li>
-						<a href="invoice.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-invoice"></span><span class="mtext">Invoice</span>
+							<span class="micon dw dw-chat3"></span><span class="mtext">Chat With Borrowers</span>
 						</a>
 					</li>
 					<li>
@@ -463,7 +496,7 @@
 					</li>
 					<li>
 						<a href="faq.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-house-1"></span><span class="mtext">Help</span>
+							<span class="micon dw dw-house-1"></span><span class="mtext">Need Help?</span>
 						</a>
 						<ul class="submenu">
 							<li><a href="introduction.html">How to use admin portal ?</a></li>
@@ -486,9 +519,8 @@
 						<h4 class="font-20 weight-500 mb-10 text-capitalize">
 							Welcome back <div class="weight-600 font-30 text-blue"> Anwesha Dutta!</div>
 						</h4>
-						<p class="font-18 max-width-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
-							hic non repellendus debitis iure, doloremque assumenda. Autem modi, corrupti, nobis ea iure
-							fugiat, veniam non quaerat mollitia animi error corporis.</p>
+						<p class="font-18 max-width-600">Your expertise is back in the driver's seat. Let's get to work!
+						</p>
 					</div>
 				</div>
 			</div>
@@ -522,36 +554,65 @@
 					<div class="col-6">
 						<h2 class="h4" style="margin: 25px 20px;">Category Details</h2>
 					</div>
-					<div class="col-6 text-right" >
+					<div class="col-6 text-right">
 						<button type="button" class="btn btn-primary" id="showInputBtn" data-toggle="modal"
-						data-target="#AddCategory" style="margin: 18px 20px;">Add Category</button>
+							data-target="#AddCategory" style="margin: 18px 20px;">Add Category</button>
 					</div>
 				</div>
-				
+
 				<table class="data-table table">
 					<thead>
 						<tr>
-							<th>Product</th>
-							<th>Category Type</th>
-							<th>Category ID</th>
-							<th data-toggle="tooltip" data-placement="top" title="Time for which user can borrow asset">Lending Period (In Days)</th>
-							<th data-toggle="tooltip" data-placement="top" title="Fees user have to pay if asset is not returned on time.">Late Fees if user is late( in Rs)</th>
-							<th data-toggle="tooltip" data-placement="top" title="Time after which user will get banned from borrowing more asset">Banned Period(in Days)</th>
+							<th>Product <svg data-toggle="tooltip" data-placement="bottom"
+								title="Generic photo to represent that asset" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>Category Type <svg data-toggle="tooltip" data-placement="bottom"
+								title="Unique name of the category" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>Category ID <svg data-toggle="tooltip" data-placement="bottom"
+								title="Unique 6 digit number of the new category" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>
+								Lending Period (In Days) <svg data-toggle="tooltip" data-placement="bottom"
+								title="Time for which user can borrow asset" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>Late Fees <svg data-toggle="tooltip" data-placement="bottom"
+								title="Fees user have to pay if asset is not returned on time."
+								xmlns="http://www.w3.org/2000/svg" height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>Banned Period(in
+								Days)  <svg data-toggle="tooltip" data-placement="bottom"
+								title="Time after which user will get banned from borrowing more asset"
+								xmlns="http://www.w3.org/2000/svg" height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td class="table-plus">
-								<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#"
-									role="button" data-toggle="dropdown">
-									<img src="vendors/images/product-1.jpg" width="70" height="70" alt="">
-								</a>
-								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#" data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
-									<a class="dropdown-item" href="#" data-toggle="modal"
-										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
-								</div>
+								<img src="vendors/images/product-1.jpg" width="70" height="70" alt="">
 							</td>
 							<td>
 								<h5 class="font-16">Laptop</h5>
@@ -564,16 +625,7 @@
 						</tr>
 						<tr>
 							<td class="table-plus">
-								<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#"
-									role="button" data-toggle="dropdown">
-									<img src="vendors/images/product-2.jpg" width="70" height="70" alt="">
-								</a>
-								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#"  data-toggle="modal"
-									data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
-									<a class="dropdown-item" href="#" data-toggle="modal"
-										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
-								</div>
+								<img src="vendors/images/product-2.jpg" width="70" height="70" alt="">
 							</td>
 							<td>
 								<h5 class="font-16">Books</h5>
@@ -589,8 +641,8 @@
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"  data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+										<a class="dropdown-item" href="#" data-toggle="modal"
+											data-target="#EditCategory"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#" data-toggle="modal"
 											data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
@@ -599,16 +651,7 @@
 						</tr>
 						<tr>
 							<td class="table-plus">
-								<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#"
-									role="button" data-toggle="dropdown">
-									<img src="vendors/images/product-3.jpg" width="70" height="70" alt="">
-								</a>
-								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#"  data-toggle="modal"
-									data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
-									<a class="dropdown-item" href="#" data-toggle="modal"
-										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
-								</div>
+								<img src="vendors/images/product-3.jpg" width="70" height="70" alt="">
 							</td>
 							<td>
 								<h5 class="font-16">Mobile</h5>
@@ -624,8 +667,8 @@
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"  data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+										<a class="dropdown-item" href="#" data-toggle="modal"
+											data-target="#EditCategory"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#" data-toggle="modal"
 											data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
@@ -634,16 +677,7 @@
 						</tr>
 						<tr>
 							<td class="table-plus">
-								<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#"
-									role="button" data-toggle="dropdown">
-									<img src="vendors/images/product-4.jpg" width="70" height="70" alt="">
-								</a>
-								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#"  data-toggle="modal"
-									data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
-									<a class="dropdown-item" href="#" data-toggle="modal"
-										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
-								</div>
+								<img src="vendors/images/product-4.jpg" width="70" height="70" alt="">
 							</td>
 							<td>
 								<h5 class="font-16">Cable</h5>
@@ -659,8 +693,8 @@
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"  data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+										<a class="dropdown-item" href="#" data-toggle="modal"
+											data-target="#EditCategory"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#" data-toggle="modal"
 											data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
@@ -674,8 +708,8 @@
 									<img src="vendors/images/product-5.jpg" width="70" height="70" alt="">
 								</a>
 								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#"  data-toggle="modal"
-									data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditAsset"><i
+											class="dw dw-edit2"></i> Edit</a>
 									<a class="dropdown-item" href="#" data-toggle="modal"
 										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 								</div>
@@ -694,8 +728,8 @@
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"  data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+										<a class="dropdown-item" href="#" data-toggle="modal"
+											data-target="#EditCategory"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#" data-toggle="modal"
 											data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
@@ -728,21 +762,57 @@
 					<div class="col-6">
 						<h2 class="h4" style="margin: 25px 20px;">Asset Details</h2>
 					</div>
-					<div class="col-6 text-right" >
+					<div class="col-6 text-right">
 						<button type="button" class="btn btn-primary" id="showInputBtn" data-toggle="modal"
-						data-target="#AddAsset" style="margin: 18px 20px;">Add Asset</button>
+							data-target="#AddAsset" style="margin: 18px 20px;">Add Asset</button>
 					</div>
 				</div>
-				
+
 				<table class="data-table table">
 					<thead>
 						<tr>
-							<th data-toggle="tooltip" data-placement="top" title="Tooltip on top">Product</th>
-							<th>Asset Name</th>
-							<th>Asset Id</th>
-							<th>Description</th>
-							<th>Date Added</th>
-							<th>Available</th>
+							<th>Product <svg data-toggle="tooltip" data-placement="bottom"
+								title="Generic photo to represent that asset" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>Asset Name <svg data-toggle="tooltip" data-placement="bottom"
+								title="Name of the asset" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg> </th>
+							<th>Asset Id <svg data-toggle="tooltip" data-placement="bottom"
+								title="Unique 6 digit number of the new asset" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>Description <svg data-toggle="tooltip" data-placement="bottom"
+								title="Detailed description of the asset" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>Date Added <svg data-toggle="tooltip" data-placement="bottom"
+								title="The date the asset was added in the system" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>Available <svg data-toggle="tooltip" data-placement="bottom"
+								title="Availablity status of the asset" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -753,8 +823,8 @@
 									<img src="vendors/images/product-1.jpg" width="70" height="70" alt="">
 								</a>
 								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#" data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditAsset"><i
+											class="dw dw-edit2"></i> Edit</a>
 									<a class="dropdown-item" href="#" data-toggle="modal"
 										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 								</div>
@@ -775,8 +845,8 @@
 									<img src="vendors/images/product-2.jpg" width="70" height="70" alt="">
 								</a>
 								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#"  data-toggle="modal"
-									data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditAsset"><i
+											class="dw dw-edit2"></i> Edit</a>
 									<a class="dropdown-item" href="#" data-toggle="modal"
 										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 								</div>
@@ -796,8 +866,8 @@
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"  data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+										<a class="dropdown-item" href="#" data-toggle="modal"
+											data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#" data-toggle="modal"
 											data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
@@ -811,8 +881,8 @@
 									<img src="vendors/images/product-3.jpg" width="70" height="70" alt="">
 								</a>
 								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#"  data-toggle="modal"
-									data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditAsset"><i
+											class="dw dw-edit2"></i> Edit</a>
 									<a class="dropdown-item" href="#" data-toggle="modal"
 										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 								</div>
@@ -832,8 +902,8 @@
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"  data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+										<a class="dropdown-item" href="#" data-toggle="modal"
+											data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#" data-toggle="modal"
 											data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
@@ -847,8 +917,8 @@
 									<img src="vendors/images/product-4.jpg" width="70" height="70" alt="">
 								</a>
 								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#"  data-toggle="modal"
-									data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditAsset"><i
+											class="dw dw-edit2"></i> Edit</a>
 									<a class="dropdown-item" href="#" data-toggle="modal"
 										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 								</div>
@@ -869,8 +939,8 @@
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"  data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+										<a class="dropdown-item" href="#" data-toggle="modal"
+											data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#" data-toggle="modal"
 											data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
@@ -884,8 +954,8 @@
 									<img src="vendors/images/product-5.jpg" width="70" height="70" alt="">
 								</a>
 								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#"  data-toggle="modal"
-									data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditAsset"><i
+											class="dw dw-edit2"></i> Edit</a>
 									<a class="dropdown-item" href="#" data-toggle="modal"
 										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 								</div>
@@ -906,8 +976,8 @@
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"  data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+										<a class="dropdown-item" href="#" data-toggle="modal"
+											data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
 										<a class="dropdown-item" href="#" data-toggle="modal"
 											data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 									</div>
@@ -938,23 +1008,65 @@
 			<div class="card-box mb-30" style="overflow-x: scroll;">
 				<div class="row">
 					<div class="col-6">
-						<h2 class="h4" style="margin: 25px 20px;">Assets</h2>
+						<h2 class="h4" style="margin: 25px 20px;">Overdue Assets Details</h2>
 					</div>
-					<div class="col-6 text-right" >
-						<button type="button" class="btn btn-primary" id="showInputBtn" data-toggle="modal"
-						data-target="#AddAsset" style="margin: 18px 20px;">Add +</button>
+					<div class="col-6 text-right">
+						<a href="chat.html" class="btn btn-primary" id="showInputBtn" style="margin: 18px 20px; color: white;">Send message to borrower</a>
 					</div>
 				</div>
-				
+
 				<table class="data-table table">
 					<thead>
 						<tr>
-							<th>Product</th>
-							<th>Catagory</th>
-							<th>Asset ID</th>
-							<th>Description</th>
-							<th>Late Fees</th>
-							<th>Available</th>
+							<th>Product <svg data-toggle="tooltip" data-placement="bottom"
+								title="Generic photo to represent that asset" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>Asset Name <svg data-toggle="tooltip" data-placement="bottom"
+								title="Name of the asset" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg> </th>
+							<th>User Name <svg data-toggle="tooltip" data-placement="bottom"
+								title="Name of the user" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>Total Late Fees (In Rs) <svg data-toggle="tooltip" data-placement="bottom"
+								title="Fees user have to pay as asset is not returned on time."
+								xmlns="http://www.w3.org/2000/svg" height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>User Asset Loan Duration (In Days)<svg data-toggle="tooltip" data-placement="bottom"
+								title="Total number of days user has taken asset using portal"
+								xmlns="http://www.w3.org/2000/svg" height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>User Borrow Date <svg data-toggle="tooltip" data-placement="bottom"
+								title="The date the user took the asset" xmlns="http://www.w3.org/2000/svg"
+								height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
+							<th>Is Banned <svg data-toggle="tooltip" data-placement="bottom"
+								title="If user is banned from borrowing more assets"
+								xmlns="http://www.w3.org/2000/svg" height="1em"
+								viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+								<path
+									d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+							</svg></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -965,8 +1077,8 @@
 									<img src="vendors/images/product-1.jpg" width="70" height="70" alt="">
 								</a>
 								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#" data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditAsset"><i
+											class="dw dw-edit2"></i> Edit</a>
 									<a class="dropdown-item" href="#" data-toggle="modal"
 										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 								</div>
@@ -975,20 +1087,41 @@
 								<h5 class="font-16">Laptop</h5>
 								Lenevo
 							</td>
-							<td>567890</td>
-							<td><b>Display size: </b>14.00-inch
-								<br>
-								<b>Display resolution: </b>1920x1080 pixels<br>
-								<b>Processor: </b>Core i7<br>
-								<b>RAM: </b>12GB<br>
-								<b>OS: </b>Windows 11<br>
-								<b>Hard disk: </b>No<br>
-								<b>SSD: </b>256<br>
-								<b>Graphics: </b>Intel HD Graphics 520<br>
-								<b>Weight: </b>1.36 kg
+							<td>Aditya Pratap Singh</td>
+							<td>1000</td>
+							<td>12</td>
+							<td>01/09/2023</td>
+							<td>
+
 							</td>
-							<td>500</td>
-							<td>Yes</td>
+						</tr>
+						<tr>
+							<td class="table-plus">
+								<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#"
+									role="button" data-toggle="dropdown">
+									<img src="vendors/images/product-1.jpg" width="70" height="70" alt="">
+								</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditAsset"><i
+											class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#" data-toggle="modal"
+										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
+								</div>
+							</td>
+							<td>
+								<h5 class="font-16">Laptop</h5>
+								Lenevo
+							</td>
+							<td>Aditya Pratap Singh</td>
+							<td>1000</td>
+							<td>12</td>
+							<td>01/09/2023</td>
+							<td>
+								Yes
+							</td>
+							<td>
+
+							</td>
 						</tr>
 						<tr>
 							<td class="table-plus">
@@ -997,69 +1130,25 @@
 									<img src="vendors/images/product-2.jpg" width="70" height="70" alt="">
 								</a>
 								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#"  data-toggle="modal"
-									data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditAsset"><i
+											class="dw dw-edit2"></i> Edit</a>
 									<a class="dropdown-item" href="#" data-toggle="modal"
 										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 								</div>
 							</td>
 							<td>
-								<h5 class="font-16">Books</h5>
-								Programming
+								<h5 class="font-16">Book</h5>
+								Learning Java
 							</td>
-							<td>901234</td>
-							<td>Books on JAVA findamentals by Cay S. Horstmann</td>
-							<td>100</td>
-							<td>No</td>
+							<td>Aditya Pratap Singh</td>
+							<td>1000</td>
+							<td>12</td>
+							<td>01/09/2023</td>
 							<td>
-								<div class="dropdown">
-									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#"
-										role="button" data-toggle="dropdown">
-										<i class="dw dw-more"></i>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"  data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
-										<a class="dropdown-item" href="#" data-toggle="modal"
-											data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="table-plus">
-								<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#"
-									role="button" data-toggle="dropdown">
-									<img src="vendors/images/product-3.jpg" width="70" height="70" alt="">
-								</a>
-								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#"  data-toggle="modal"
-									data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
-									<a class="dropdown-item" href="#" data-toggle="modal"
-										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
-								</div>
+								Yes
 							</td>
 							<td>
-								<h5 class="font-16">Mobile</h5>
-								Apple
-							</td>
-							<td>345678</td>
-							<td>256 gb ROM</td>
-							<td>100</td>
-							<td>Yes</td>
-							<td>
-								<div class="dropdown">
-									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#"
-										role="button" data-toggle="dropdown">
-										<i class="dw dw-more"></i>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"  data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
-										<a class="dropdown-item" href="#" data-toggle="modal"
-											data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
-									</div>
-								</div>
+
 							</td>
 						</tr>
 						<tr>
@@ -1069,8 +1158,8 @@
 									<img src="vendors/images/product-4.jpg" width="70" height="70" alt="">
 								</a>
 								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#"  data-toggle="modal"
-									data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditAsset"><i
+											class="dw dw-edit2"></i> Edit</a>
 									<a class="dropdown-item" href="#" data-toggle="modal"
 										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 								</div>
@@ -1079,24 +1168,15 @@
 								<h5 class="font-16">Cable</h5>
 								Zabra
 							</td>
-							<td>789012</td>
-							<td>Jabra is a Danish brand specializing in audio equipment,<br>
-								and more recently videoconference systems</td>
-							<td>100</td>
-							<td>No</td>
+							<td>Aditya Pratap Singh</td>
+							<td>1000</td>
+							<td>12</td>
+							<td>01/09/2023</td>
 							<td>
-								<div class="dropdown">
-									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#"
-										role="button" data-toggle="dropdown">
-										<i class="dw dw-more"></i>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"  data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
-										<a class="dropdown-item" href="#" data-toggle="modal"
-											data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
-									</div>
-								</div>
+								Yes
+							</td>
+							<td>
+
 							</td>
 						</tr>
 						<tr>
@@ -1106,36 +1186,26 @@
 									<img src="vendors/images/product-5.jpg" width="70" height="70" alt="">
 								</a>
 								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="#"  data-toggle="modal"
-									data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
+									<a class="dropdown-item" href="#" data-toggle="modal" data-target="#EditAsset"><i
+											class="dw dw-edit2"></i> Edit</a>
 									<a class="dropdown-item" href="#" data-toggle="modal"
 										data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
 								</div>
 							</td>
 							<td>
-								<h5 class="font-16">Headphone</h5>
+								<h5 class="font-16">Heaphones</h5>
 								Boat
 							</td>
-							<td>123456</td>
-							<td>Uses wireless technology to transmit data between the audio source <br> x`and the earbud
-							</td>
-							<td>100</td>
-							<td>Yes</td>
+							<td>Aditya Pratap Singh</td>
+							<td>1000</td>
+							<td>12</td>
+							<td>01/09/2023</td>
 							<td>
-								<div class="dropdown">
-									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#"
-										role="button" data-toggle="dropdown">
-										<i class="dw dw-more"></i>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"  data-toggle="modal"
-										data-target="#EditAsset"><i class="dw dw-edit2"></i> Edit</a>
-										<a class="dropdown-item" href="#" data-toggle="modal"
-											data-target="#exampleModalCenter"><i class="dw dw-delete-3"></i> Delete</a>
-									</div>
-								</div>
+								No
 							</td>
-						</tr>
+							<td>
+
+							</td>
 					</tbody>
 					<tr>
 						<td>
@@ -1185,7 +1255,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
 		crossorigin="anonymous"></script>
-		
+
 
 </body>
 

@@ -72,44 +72,6 @@
 
 	<div class="header">
 		<div class="header-left">
-			<div class="menu-icon dw dw-menu"></div>
-			<div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
-			<div class="header-search">
-				<form>
-					<div class="form-group mb-0">
-						<i class="dw dw-search2 search-icon"></i>
-						<input type="text" class="form-control search-input" placeholder="Search Here">
-						<div class="dropdown">
-							<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
-								<i class="ion-arrow-down-c"></i>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<div class="form-group row">
-									<label class="col-sm-12 col-md-2 col-form-label">From</label>
-									<div class="col-sm-12 col-md-10">
-										<input class="form-control form-control-sm form-control-line" type="text">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-12 col-md-2 col-form-label">To</label>
-									<div class="col-sm-12 col-md-10">
-										<input class="form-control form-control-sm form-control-line" type="text">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-12 col-md-2 col-form-label">Subject</label>
-									<div class="col-sm-12 col-md-10">
-										<input class="form-control form-control-sm form-control-line" type="text">
-									</div>
-								</div>
-								<div class="text-right">
-									<button class="btn btn-primary">Search</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
 		</div>
 		<div class="header-right">
 			<div class="dashboard-setting user-notification">
@@ -302,23 +264,9 @@
 							<span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
 						</a>
 					</li>
-
-
-					<li>
-						<a href="calendar.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-calendar1"></span><span class="mtext">Calendar</span>
-						</a>
-					</li>
-
-
 					<li>
 						<a href="chat.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-chat3"></span><span class="mtext">Chat</span>
-						</a>
-					</li>
-					<li>
-						<a href="invoice.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-invoice"></span><span class="mtext">Invoice</span>
+							<span class="micon dw dw-chat3"></span><span class="mtext">Chat With Borrowers</span>
 						</a>
 					</li>
 					<li>
@@ -329,7 +277,7 @@
 					</li>
 					<li>
 						<a href="faq.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-house-1"></span><span class="mtext">Help</span>
+							<span class="micon dw dw-house-1"></span><span class="mtext">Need Help?</span>
 						</a>
 						<ul class="submenu">
 							<li><a href="introduction.html">How to use admin portal ?</a></li>
@@ -449,158 +397,6 @@
 														future scope
 													</div>
 													<!-- Close Task start -->
-													<!-- add task popup start -->
-													<div class="modal fade customscroll" id="task-add" tabindex="-1"
-														role="dialog">
-														<div class="modal-dialog modal-dialog-centered" role="document">
-															<div class="modal-content">
-																<div class="modal-header">
-																	<h5 class="modal-title" id="exampleModalLongTitle">
-																		Tasks Add</h5>
-																	<button type="button" class="close"
-																		data-dismiss="modal" aria-label="Close"
-																		data-toggle="tooltip" data-placement="bottom"
-																		title="" data-original-title="Close Modal">
-																		<span aria-hidden="true">&times;</span>
-																	</button>
-																</div>
-																<div class="modal-body pd-0">
-																	<div class="task-list-form">
-																		<ul>
-																			<li>
-																				<form>
-																					<div class="form-group row">
-																						<label class="col-md-4">Task
-																							Type</label>
-																						<div class="col-md-8">
-																							<input type="text"
-																								class="form-control">
-																						</div>
-																					</div>
-																					<div class="form-group row">
-																						<label class="col-md-4">Task
-																							Message</label>
-																						<div class="col-md-8">
-																							<textarea
-																								class="form-control"></textarea>
-																						</div>
-																					</div>
-																					<div class="form-group row">
-																						<label class="col-md-4">Assigned
-																							to</label>
-																						<div class="col-md-8">
-																							<select
-																								class="selectpicker form-control"
-																								data-style="btn-outline-primary"
-																								title="Not Chosen"
-																								multiple=""
-																								data-selected-text-format="count"
-																								data-count-selected-text="{0} people selected">
-																								<option>Ferdinand M.
-																								</option>
-																								<option>Don H. Rabon
-																								</option>
-																								<option>Ann P. Harris
-																								</option>
-																								<option>Katie D. Verdin
-																								</option>
-																								<option>Christopher S.
-																									Fulghum</option>
-																								<option>Matthew C.
-																									Porter</option>
-																							</select>
-																						</div>
-																					</div>
-																					<div class="form-group row mb-0">
-																						<label class="col-md-4">Due
-																							Date</label>
-																						<div class="col-md-8">
-																							<input type="text"
-																								class="form-control date-picker">
-																						</div>
-																					</div>
-																				</form>
-																			</li>
-																			<li>
-																				<a href="javascript:;"
-																					class="remove-task"
-																					data-toggle="tooltip"
-																					data-placement="bottom" title=""
-																					data-original-title="Remove Task"><i
-																						class="ion-minus-circled"></i></a>
-																				<form>
-																					<div class="form-group row">
-																						<label class="col-md-4">Task
-																							Type</label>
-																						<div class="col-md-8">
-																							<input type="text"
-																								class="form-control">
-																						</div>
-																					</div>
-																					<div class="form-group row">
-																						<label class="col-md-4">Task
-																							Message</label>
-																						<div class="col-md-8">
-																							<textarea
-																								class="form-control"></textarea>
-																						</div>
-																					</div>
-																					<div class="form-group row">
-																						<label class="col-md-4">Assigned
-																							to</label>
-																						<div class="col-md-8">
-																							<select
-																								class="selectpicker form-control"
-																								data-style="btn-outline-primary"
-																								title="Not Chosen"
-																								multiple=""
-																								data-selected-text-format="count"
-																								data-count-selected-text="{0} people selected">
-																								<option>Ferdinand M.
-																								</option>
-																								<option>Don H. Rabon
-																								</option>
-																								<option>Ann P. Harris
-																								</option>
-																								<option>Katie D. Verdin
-																								</option>
-																								<option>Christopher S.
-																									Fulghum</option>
-																								<option>Matthew C.
-																									Porter</option>
-																							</select>
-																						</div>
-																					</div>
-																					<div class="form-group row mb-0">
-																						<label class="col-md-4">Due
-																							Date</label>
-																						<div class="col-md-8">
-																							<input type="text"
-																								class="form-control date-picker">
-																						</div>
-																					</div>
-																				</form>
-																			</li>
-																		</ul>
-																	</div>
-																	<div class="add-more-task">
-																		<a href="#" data-toggle="tooltip"
-																			data-placement="bottom" title=""
-																			data-original-title="Add Task"><i
-																				class="ion-plus-circled"></i> Add More
-																			Task</a>
-																	</div>
-																</div>
-																<div class="modal-footer">
-																	<button type="button"
-																		class="btn btn-primary">Add</button>
-																	<button type="button" class="btn btn-secondary"
-																		data-dismiss="modal">Close</button>
-																</div>
-															</div>
-														</div>
-													</div>
-													<!-- add task popup End -->
 												</div>
 											</div>
 										</div>
@@ -609,24 +405,40 @@
 										<div class="tab-pane fade height-100-p  show active" id="setting"
 											role="tabpanel">
 											<div class="profile-setting">
-												<form onsubmit="return false;">
+												<form action="#" onsubmit="$('#exampleModalCenter').modal('show')">
 													<ul class="profile-edit-list row">
 														<li class="weight-500 col-md-12">
 															<h4 class="text-blue h5 mb-20 text-center">Edit Your
 																Personal Settings</h4>
+																<div class="form-group">
+																	<label>Email</label>
+																	<input class="form-control form-control-lg"
+																		type="email" value="anweshadutta@gmail.com" disabled>
+																</div>
+																<div class="form-group">
+																	<label>Password <svg data-toggle="tooltip" data-placement="bottom"
+																		title="At least one uppercase letter (A-Z).
+																		At least one lowercase letter (a-z).
+																		At least one digit (0-9).
+																		At least one special character (@$!%*?&).
+																		Minimum length of 8 characters." xmlns="http://www.w3.org/2000/svg"
+																		height="1em"
+																		viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+																		<path
+																			d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+																	</svg></label>
+																	<input class="form-control form-control-lg"
+																		type="password" value="Pass@123">
+																</div>
 															<div class="form-group">
 																<label>Full Name</label>
-																<input class="form-control form-control-lg" type="text" value="Anwesha Dutta">
+																<input class="form-control form-control-lg" type="text" value="Anwesha Dutta" required pattern="[A-Za-z\s]*">
 															</div>
 															<div class="form-group">
 																<label>Title</label>
-																<input class="form-control form-control-lg" type="text" value="Senior Asset manager">
+																<input class="form-control form-control-lg" type="text" value="Senior Asset manager" pattern="[A-Za-z\s]*">
 															</div>
-															<div class="form-group">
-																<label>Email</label>
-																<input class="form-control form-control-lg"
-																	type="email" value="anweshadutta@gmail.com">
-															</div>
+															
 															<div class="form-group">
 																<label>Date of birth</label>
 																<input class="form-control form-control-lg date-picker"
@@ -648,6 +460,13 @@
 																			class="custom-control-input" checked>
 																		<label class="custom-control-label weight-400"
 																			for="customRadio5">Female</label>
+																	</div>
+																	<div class="custom-control custom-radio mb-5">
+																		<input type="radio" id="customRadio5"
+																			name="customRadio"
+																			class="custom-control-input" checked>
+																		<label class="custom-control-label weight-400"
+																			for="customRadio5">Don't want to specify</label>
 																	</div>
 																</div>
 															</div>
@@ -963,15 +782,16 @@
 															</div>
 															<div class="form-group">
 																<label>State/Province/Region</label>
-																<input class="form-control form-control-lg" type="text" value="West Bengal">
+																<input class="form-control form-control-lg" type="text" value="West Bengal" required pattern="[A-Za-z\s]*">
 															</div>
 															<div class="form-group">
 																<label>Postal Code</label>
-																<input class="form-control form-control-lg" type="text" value="712235">
+																<input class="form-control form-control-lg" type="text" value="712235" required >
 															</div>
 															<div class="form-group">
 																<label>Phone Number</label>
-																<input class="form-control form-control-lg" type="text" value="+91 7581613353">
+																<input class="form-control form-control-lg" type="text" value="+91 7581613353" required pattern="^\+\d{1,4}(?:[ -]?\d{2,5}){1,5}$
+																">
 															</div>
 															<div class="form-group">
 																<label>Address</label>
@@ -987,9 +807,8 @@
 																</div>
 															</div>
 															<div class="form-group mb-0 text-center">
-																<input type="" class="btn btn-primary"
-																	value="Update Information" data-toggle="modal"
-																	data-target="#exampleModalCenter">
+																<input type="submit" class="btn btn-primary"
+																	value="Update Information">
 															</div>
 														</li>
 													</ul>
