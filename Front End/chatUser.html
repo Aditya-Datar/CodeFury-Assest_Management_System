@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+	<title>Chat</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
@@ -14,78 +15,50 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Google Font -->
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
-	<link rel="stylesheet" type="text/css" href="src/plugins/fullcalendar/fullcalendar.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 
 		gtag('config', 'UA-119386393-1');
 	</script>
 </head>
+
 <body>
-	<!-- <div class="pre-loader">
-		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="vendors/images/deskapp-logo.svg" alt=""></div>
-			<div class='loader-progress' id="progress_div">
-				<div class='bar' id='bar1'></div>
-			</div>
-			<div class='percent' id='percent1'>0%</div>
-			<div class="loading-text">
-				Loading...
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Ajax Required :\</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					AJAX is Required here to complete the requested action
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
+				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 
-	
 	<div class="header">
 		<div class="header-left">
-			<div class="menu-icon dw dw-menu"></div>
-			<div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
-			<div class="header-search">
-				<form>
-					<div class="form-group mb-0">
-						<i class="dw dw-search2 search-icon"></i>
-						<input type="text" class="form-control search-input" placeholder="Search Here">
-						<div class="dropdown">
-							<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
-								<i class="ion-arrow-down-c"></i>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<div class="form-group row">
-									<label class="col-sm-12 col-md-2 col-form-label">From</label>
-									<div class="col-sm-12 col-md-10">
-										<input class="form-control form-control-sm form-control-line" type="text">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-12 col-md-2 col-form-label">To</label>
-									<div class="col-sm-12 col-md-10">
-										<input class="form-control form-control-sm form-control-line" type="text">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-sm-12 col-md-2 col-form-label">Subject</label>
-									<div class="col-sm-12 col-md-10">
-										<input class="form-control form-control-sm form-control-line" type="text">
-									</div>
-								</div>
-								<div class="text-right">
-									<button class="btn btn-primary">Search</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
 		</div>
 		<div class="header-right">
 			<div class="dashboard-setting user-notification">
@@ -133,14 +106,7 @@
 											there that need to be changed.</p>
 									</a>
 								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo1.jpg" alt="">
-										<h3>Rudraksha Padole</h3>
-										<p>Done with the DataBase , let me know if you have doubt regarding anything.
-										</p>
-									</a>
-								</li>
+								
 								<li>
 									<a href="#">
 										<img src="vendors/images/img.jpg" alt="">
@@ -262,7 +228,7 @@
 
 	<div class="left-side-bar">
 		<div class="brand-logo">
-			<a href="index.html">
+			<a href="indexUser.html">
 				<img src="vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
 				<img src="vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
 			</a>
@@ -272,29 +238,16 @@
 		</div>
 		<div class="menu-block customscroll">
 			<div class="sidebar-menu">
+				
 				<ul id="accordion-menu">
 					<li>
-						<a href="index.html" class="dropdown-toggle no-arrow">
+						<a href="indexUser.html" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
 						</a>
 					</li>
-
-
 					<li>
-						<a href="calendar.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-calendar1"></span><span class="mtext">Calendar</span>
-						</a>
-					</li>
-
-
-					<li>
-						<a href="chat.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-chat3"></span><span class="mtext">Chat</span>
-						</a>
-					</li>
-					<li>
-						<a href="invoice.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-invoice"></span><span class="mtext">Invoice</span>
+						<a href="chatUser.html" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-chat3"></span><span class="mtext">Chat With Admin</span>
 						</a>
 					</li>
 					<li>
@@ -304,8 +257,8 @@
 						<div class="sidebar-small-cap">Extra</div>
 					</li>
 					<li>
-						<a href="faq.html" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-house-1"></span><span class="mtext">Help</span>
+						<a href="userFaq.html" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-house-1"></span><span class="mtext">Need Help?</span>
 						</a>
 						<ul class="submenu">
 							<li><a href="introduction.html">How to use admin portal ?</a></li>
@@ -322,89 +275,153 @@
 			<div class="min-height-200px">
 				<div class="page-header">
 					<div class="row">
-						<div class="col-md-12 col-sm-12">
+						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>Calendar</h4>
+								<h4>Chat with Admin</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Calendar</li>
+									<li class="breadcrumb-item"><a href="indexUser.html">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Chat With Admin</li>
 								</ol>
 							</nav>
 						</div>
 					</div>
 				</div>
-				<div class="pd-20 card-box mb-30">
-					<div class="calendar-wrap">
-						<div id='calendar'></div>
-					</div>
-					<!-- calendar modal -->
-					<div id="modal-view-event" class="modal modal-top fade calendar-modal">
-						<div class="modal-dialog modal-dialog-centered">
-							<div class="modal-content">
-								<div class="modal-body">
-									<h4 class="h4"><span class="event-icon weight-400 mr-3"></span><span class="event-title"></span></h4>
-									<div class="event-body"></div>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				<div class="bg-white border-radius-4 box-shadow mb-30">
+					<div class="row no-gutters">
+						<div class="col-lg-3 col-md-4 col-sm-12">
+							<div class="chat-list bg-light-gray">
+								<div class="notification-list chat-notification-list customscroll">
+									<ul>
+										<li class="active">
+											<a href="#">
+												<img src="vendors/images/img.jpg" alt="">
+												<h3 class="clearfix">Aditya Pratap Singh</h3>
+												<p><i class="fa fa-circle text-light-green"></i> online</p>
+											</a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
-					</div>
+						<div class="col-lg-9 col-md-8 col-sm-12">
+							<div class="chat-detail">
+								<div class="chat-profile-header clearfix">
+									<div class="left">
+										<div class="clearfix">
+											<div class="chat-profile-photo">
+												<img src="vendors/images/profile-photo.jpg" alt="">
+											</div>
+											<div class="chat-profile-name">
+												<h3>Aditya Pratap Singh</h3>
+												<span>Admin</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="chat-box">
+									<div class="chat-desc customscroll">
+										<ul>
+											<li class="clearfix">
+												<span class="chat-img">
+													<img src="vendors/images/chat-img2.jpg" alt="">
+												</span>
+												<div class="chat-body clearfix">
+													<p> Hi Aditya, we hope you're doing well. We've noticed that you
+														still have some borrowed assets that are overdue. It's essential
+														to return assets on time to ensure their availability for other
+														users.</p>
+												</div>
+											</li>
+											<li class="clearfix admin_chat">
+												<span class="chat-img admin_chat">
+													<img src="vendors/images/chat-img2.jpg" alt="">
+												</span>
+												<div class="chat-body clearfix">
+													<p>I apologize for the delay. I've been quite busy lately.</p>
+												</div>
+											</li>
+											<li class="clearfix">
+												<span class="chat-img">
+													<img src="vendors/images/chat-img1.jpg" alt="">
+												</span>
+												<div class="chat-body clearfix">
+													<p>We understand that life can get hectic. However, please keep in
+														mind that late returns may result in late fees. We have a policy
+														in place to maintain fair access to assets for everyone.
+													</p>
+												</div>
+											</li>
+											<li class="clearfix admin_chat">
+												<span class="chat-img">
+													<img src="vendors/images/chat-img1.jpg" alt="">
+												</span>
+												<div class="chat-body clearfix">
+													<p>I see. What are the late fees, and how can I return the assets?
+													</p>
+												</div>
+											</li>
+											<li class="clearfix">
+												<span class="chat-img">
+													<img src="vendors/images/chat-img2.jpg" alt="">
+												</span>
+												<div class="chat-body clearfix">
+													<p>Late fees can vary depending on the asset and our borrowing
+														policies. </p>
+													<p>
+														To return the assets, please follow these steps:
+													</p>
+													<p>
+														1. Check the due date in your account to confirm the return
+														deadline. <br>
+														2. Prepare the assets for return, ensuring they are in good
+														condition. <br>
+														3. Contact our support team or use the portal to initiate the
+														return process.
+													</p>
+												</div>
+											</li>
+											<li class="clearfix admin_chat">
+												<span class="chat-img">
+													<img src="vendors/images/chat-img2.jpg" alt="">
+												</span>
+												<div class="chat-body clearfix">
+													<p>Thank you for the information. I'll make sure to return the
+														assets promptly.</p>
+												</div>
+											</li>
+											<li class="clearfix">
+												<span class="chat-img">
+													<img src="vendors/images/chat-img2.jpg" alt="">
+												</span>
+												<div class="chat-body clearfix">
+													<p> You're welcome, Aditya. If you have any questions or encounter
+														any issues during the return process, don't hesitate to reach
+														out. We're here to assist you. </p>
 
-					<div id="modal-view-event-add" class="modal modal-top fade calendar-modal">
-						<div class="modal-dialog modal-dialog-centered">
-							<div class="modal-content">
-								<form id="add-event">
-									<div class="modal-body">
-										<h4 class="text-blue h4 mb-10">Add Event Detail</h4>
-										<div class="form-group">
-											<label>Event name</label>
-											<input type="text" class="form-control" name="ename">
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="chat-footer">
+										<div class="chat_text_area" style="margin-left: 25px;">
+											<textarea placeholder="Type your message…"></textarea>
 										</div>
-										<div class="form-group">
-											<label>Event Date</label>
-											<input type='text' class="datetimepicker form-control" name="edate">
-										</div>
-										<div class="form-group">
-											<label>Event Description</label>
-											<textarea class="form-control" name="edesc"></textarea>
-										</div>
-										<div class="form-group">
-											<label>Event Color</label>
-											<select class="form-control" name="ecolor">
-												<option value="fc-bg-default">fc-bg-default</option>
-												<option value="fc-bg-blue">fc-bg-blue</option>
-												<option value="fc-bg-lightgreen">fc-bg-lightgreen</option>
-												<option value="fc-bg-pinkred">fc-bg-pinkred</option>
-												<option value="fc-bg-deepskyblue">fc-bg-deepskyblue</option>
-											</select>
-										</div>
-										<div class="form-group">
-											<label>Event Icon</label>
-											<select class="form-control" name="eicon">
-												<option value="circle">circle</option>
-												<option value="cog">cog</option>
-												<option value="group">group</option>
-												<option value="suitcase">suitcase</option>
-												<option value="calendar">calendar</option>
-											</select>
+										<div class="chat_send">
+											<button data-toggle="modal"
+											data-target="#exampleModalCenter" class="btn btn-link" type="submit"><i
+													class="icon-copy ion-paper-airplane"></i></button>
 										</div>
 									</div>
-									<div class="modal-footer">
-										<button type="submit" class="btn btn-primary" >Save</button>
-										<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-									</div>
-								</form>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
-				DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+				E- Asset Developed by WFS -1, Team 1</a>
 			</div>
 		</div>
 	</div>
@@ -413,7 +430,6 @@
 	<script src="vendors/scripts/script.min.js"></script>
 	<script src="vendors/scripts/process.js"></script>
 	<script src="vendors/scripts/layout-settings.js"></script>
-	<script src="src/plugins/fullcalendar/fullcalendar.min.js"></script>
-	<script src="vendors/scripts/calendar-setting.js"></script>
 </body>
+
 </html>
