@@ -1,4 +1,4 @@
-# AssetJets - E-Asset Management Portal
+# Asset Jets - E-Asset Management Portal
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@
 
 ## Introduction
 
-Welcome to AssetJets, an advanced E-Asset Management Portal. This platform is designed to simplify asset management for businesses. Whether you're an administrator or a user, AssetJets has got you covered. This README will guide you through the setup process and provide insights into the project structure.
+Welcome to Asset Jets, an advanced E-Asset Management Portal. This platform is designed to simplify asset management for businesses. Whether you're an administrator or a user, Asset Jets has got you covered. This README will guide you through the setup process and provide insights into the project structure.
 
 ## Getting Started
 
@@ -36,21 +36,29 @@ To set up the backend, follow these steps:
 
 1. **Java and MySQL**: Ensure you have Java 11 and MySQL version 8 installed on your system.
 
-2. **JDBC Jar**: Download the JDBC JAR file and connect it to your project's build path. (Add instructions for connecting JDBC here.)
+2. **Download JDBC JAR**: Download the JDBC JAR file from [your preferred source] and save it to a location on your system.
 
-3. **SQL Queries**: Execute SQL queries from the `backend application/sql queries` folder to create the necessary database tables.
+3. **Connect JDBC to Build Path**: Now, let's connect the JDBC JAR to your project's build path. Here's how:
+   - Open your project in your preferred Java development environment.
+   - Locate the JDBC JAR file you downloaded.
+   - Right-click on your project in the project explorer.
+   - Select "Properties" or "Build Path" depending on your IDE.
+   - Under the "Libraries" or "Build Path" tab, click on "Add External JARs" or "Add JARs" and navigate to the downloaded JDBC JAR file.
+   - Select the JAR file and click "OK" to add it to your project's build path.
 
-4. **Edit Connection URLs**: In the following classes, edit the connection URLs to connect to your MySQL database. Use the Java convention:
+4. **Execute SQL Queries**: Execute SQL queries from the `backend application/sql queries` folder to create the necessary database tables.
+
+5. **Edit Connection URLs**: In the following classes, edit the connection URLs to connect to your MySQL database. Use the Java convention:
    - `AssetDueDaoImpl`
    - `UserDaoImpl`
    - `AssetCategoryImpl`
    - `AssetDao`
 
-5. **Execute Main.java**: Run the `Main.java` file located in the package `com.company.ui` to start the backend of the AssetJets portal.
+6. **Execute Main.java**: Run the `Main.java` file located in the package `com.company.ui` to start the backend of the Asset Jets portal.
 
 ## Folder Structure
 
-In the AssetJets project, you'll find the following folder structure:
+In the Asset Jets project, you'll find the following folder structure:
 
 - `/application`: This directory contains all the code files related to the application's front-end and back-end.
 
@@ -98,4 +106,4 @@ For detailed documentation, refer to the following:
 
 - **Security**: Please note that the provided 'Test@123' password is a strong example. In a real-world scenario, it's essential to enforce robust password policies to enhance security.
 
-By following these instructions, you'll be able to set up and explore the AssetJets E-Asset Management Portal effectively.
+By following these instructions, you'll be able to set up and explore the Asset Jets E-Asset Management Portal effectively. We wish you the best of luck in the competition! If you have any questions or need further assistance, feel free to reach out to us.
