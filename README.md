@@ -64,7 +64,6 @@ In the Asset Jets project, you'll find the following folder structure:
 
 - `/documents`: All necessary documentation, manuals, and guides are stored here.
 
-- `/images`: This folder holds essential images and assets required for the application's user interface. We have organized them into separate folders for better management.
 
 ## Why Multiple Folders?
 
